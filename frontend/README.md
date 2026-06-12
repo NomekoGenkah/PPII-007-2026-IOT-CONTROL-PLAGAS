@@ -1,0 +1,2 @@
+# PPII-007-2026-IOT-CONTROL-PLAGAS
+# frontend
