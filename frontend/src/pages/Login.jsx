@@ -82,7 +82,6 @@ function Login() {
               </svg>
             </button>
           </form>
-
           <a href="#" className="forgot-password">¿Olvidaste tu contraseña?</a>
         </div>
 
