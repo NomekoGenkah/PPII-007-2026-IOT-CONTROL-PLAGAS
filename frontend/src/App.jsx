@@ -3,6 +3,7 @@ import Layout from './components/Layout'
 import Login from './pages/Login'
 import Devices from './pages/Devices'
 import DeviceDetail from './pages/DeviceDetail'
+import Statistics from './pages/Statistics'
 
 function Placeholder({ title }) {
   return (
@@ -23,7 +24,7 @@ function App() {
           <Route path="/mapa" element={<Placeholder title="Mapa" />} />
           <Route path="/dispositivos" element={<Devices />} />
           <Route path="/dispositivos/:id" element={<DeviceDetail />} />
-          <Route path="/estadisticas" element={<Placeholder title="Estadísticas" />} />
+          <Route path="/estadisticas" element={<Statistics />} />
         </Route>
       </Routes>
     </BrowserRouter>
