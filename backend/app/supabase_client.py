@@ -5,10 +5,7 @@ from dotenv import load_dotenv
 from supabase import Client, create_client
 
 
-# Ruta de la carpeta backend
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-# Cargar las variables guardadas en backend/.env
 load_dotenv(BASE_DIR / ".env")
 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
@@ -22,7 +19,5 @@ if not SUPABASE_KEY:
     raise RuntimeError("No se encontró SUPABASE_KEY en el archivo .env")
 
 
-supabase: Client = create_client(
-    SUPABASE_URL,
-    SUPABASE_KEY,
-)
+def get_supabase_client() -> Client:
+    return create_client(SUPABASE_URL, SUPABASE_KEY)
