@@ -48,18 +48,18 @@ def on_message(client, userdata, msg):
         # Mapear los datos que envía el ESP32 a las columnas exactas de SQL
         registro = {
             "sensor_id": data.get("sensor_slug"),  # ej: "01"
-            "conteo": data.get("contador"),        # ej: 14
+        #    "conteo": data.get("contador"),        # ej: 14
             "señal_wifi": data.get("wifi"),        # ej: -68
             "uptime_ms": data.get("uptime")        # ej: 3200500
         }
 
         # Validar que los datos mínimos existan antes de insertar
-        if registro["sensor_id"] is not None and registro["conteo"] is not None:
+        if registro["sensor_id"] is not None:
             # Insertar en la tabla "registros_plagas" de Supabase
             response = supabase.table("registros_plagas").insert(registro).execute()
             print("💾 Datos guardados en Supabase correctamente.")
         else:
-            print("⚠️ Advertencia: El payload no contiene los campos requeridos (sensor_slug o contador).")
+            print("⚠️ Advertencia: El payload no contiene los campos requeridos (sensor_slug).")
 
     except json.JSONDecodeError:
         print("❌ Error: El mensaje recibido no es un JSON válido.")
