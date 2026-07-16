@@ -7,10 +7,22 @@ Work on `desarrollo`; merge to `main` for releases. Remotes: `origin` (primary) 
 ## Frontend (`frontend/`)
 
 - **Stack:** React 19 + Vite 8 + JSX (no TypeScript). `@types/react` is installed for editor autocomplete only.
-- **Routing:** `react-router-dom` v7. Layout uses `NavLink` + `Outlet` sidebar pattern. Routes use Spanish paths (`/dispositivos`, `/mapa`, `/estadisticas`). Some routes are placeholders ("Proximamente").
+- **Routing:** `react-router-dom` v7. Layout uses `NavLink` + `Outlet` sidebar pattern. All route paths are Spanish.
 - **Entrypoint:** `src/main.jsx` → `src/App.jsx`.
-- **Styling:** Plain `.css` files (no CSS modules, no Tailwind, no preprocessor).
-- **Scaffold name** in `package.json` is still `vite-temp` (Vite template default).
+- **Styling:** Plain co-located `.css` files (e.g. `Devices.jsx` + `Devices.css`). No CSS modules, no Tailwind, no preprocessor. Dark-mode variables exist in `index.css` but component styles are light-themed.
+- **Brand:** "ULSPests Control — Monitoreo de Plagas" (sidebar and login).
+- **State:** Entirely mock/hardcoded data. No backend API connected yet.
+
+### Route structure (`src/App.jsx`)
+
+| Path | Component | Status |
+|---|---|---|
+| `/login` | `Login` | Implemented (outside Layout, no sidebar) |
+| `/` | `Placeholder("Inicio")` | Stub |
+| `/mapa` | `Placeholder("Mapa")` | Stub |
+| `/dispositivos` | `Devices` | Implemented (empty list) |
+| `/dispositivos/:id` | `DeviceDetail` | Implemented (hardcoded detail) |
+| `/estadisticas` | `Statistics` | Implemented (mock bar chart) |
 
 ### Commands (run from `frontend/`)
 
@@ -21,7 +33,5 @@ npm run preview  # preview production build
 npm run lint     # oxlint (not ESLint) — config in oxlintrc.json
 ```
 
-- **Lint config:** oxlint with `react` and `oxc` plugins; enforces rules-of-hooks and only-export-components.
-- No test framework installed yet.
-- No formatter config. Match existing style manually.
-- No CI/CD or pre-commit hooks.
+- **Lint:** oxlint with `react` and `oxc` plugins; enforces rules-of-hooks and only-export-components.
+- No test framework, formatter, CI/CD, or pre-commit hooks.
