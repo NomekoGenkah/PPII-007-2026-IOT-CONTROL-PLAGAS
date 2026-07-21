@@ -7,8 +7,8 @@ function Layout() {
       <aside className="sidebar">
         <div className="sidebar-brand">
           <h1 className="brand-title">
-            <span className="brand-pests">ULSPests</span>
-            <span className="brand-control">Control</span>
+            <span className="brand-pests">ECO </span>
+            <span className="brand-control">- Control de Plagas IoT</span>
           </h1>
           <p className="brand-subtitle">Monitoreo de Plagas</p>
         </div>

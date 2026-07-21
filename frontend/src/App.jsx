@@ -1,18 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import Login from './pages/Login'
+import Home from './pages/Home'
+import Mapa from './pages/Mapa'
 import Devices from './pages/Devices'
 import DeviceDetail from './pages/DeviceDetail'
 import Statistics from './pages/Statistics'
-
-function Placeholder({ title }) {
-  return (
-    <div style={{ padding: '40px', textAlign: 'center' }}>
-      <h2 style={{ color: '#1A1A2E', marginBottom: '8px' }}>{title}</h2>
-      <p style={{ color: '#8E8EA0', fontSize: '14px' }}>Próximamente</p>
-    </div>
-  )
-}
 
 function App() {
   return (
@@ -20,8 +13,8 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route element={<Layout />}>
-          <Route path="/" element={<Placeholder title="Inicio" />} />
-          <Route path="/mapa" element={<Placeholder title="Mapa" />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/mapa" element={<Mapa />} />
           <Route path="/dispositivos" element={<Devices />} />
           <Route path="/dispositivos/:id" element={<DeviceDetail />} />
           <Route path="/estadisticas" element={<Statistics />} />

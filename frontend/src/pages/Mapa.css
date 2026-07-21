@@ -1,0 +1,159 @@
+.mapa-page {
+  padding: 32px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mapa-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.mapa-map-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  min-height: 420px;
+}
+
+.mapa-map-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 420px;
+  padding: 48px 32px;
+  text-align: center;
+  gap: 12px;
+}
+
+.mapa-empty-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1A1A2E;
+  margin: 8px 0 0;
+}
+
+.mapa-empty-desc {
+  font-size: 14px;
+  color: #8E8EA0;
+  max-width: 360px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.mapa-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mapa-legend-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+}
+
+.mapa-legend-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1A1A2E;
+  margin: 0 0 16px;
+}
+
+.mapa-legend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mapa-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mapa-legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.mapa-legend-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4A4A68;
+}
+
+.mapa-devices-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  flex: 1;
+}
+
+.mapa-devices-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1A1A2E;
+  margin: 0 0 16px;
+}
+
+.mapa-devices-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  text-align: center;
+  gap: 8px;
+}
+
+.mapa-devices-empty-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1A1A2E;
+  margin: 8px 0 0;
+}
+
+.mapa-devices-empty-desc {
+  font-size: 13px;
+  color: #8E8EA0;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.mapa-summary-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.mapa-summary-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mapa-summary-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1A1A2E;
+}
+
+.mapa-summary-label {
+  font-size: 13px;
+  color: #8E8EA0;
+  font-weight: 500;
+}
